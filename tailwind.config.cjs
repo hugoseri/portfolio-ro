@@ -21,18 +21,15 @@ module.exports = {
     extend: {
       textColor: {
         skin: {
-          base: withOpacity("--color-text-base"),
-          accent: withOpacity("--color-accent"),
-          inverted: withOpacity("--color-fill"),
+          base: withOpacity("--color-text"),
+          title: withOpacity("--color-primary"),
+          heading: withOpacity("--color-dark"),
         },
       },
       backgroundColor: {
         skin: {
-          fill: withOpacity("--color-fill"),
-          accent: withOpacity("--color-accent"),
-          inverted: withOpacity("--color-text-base"),
+          fill: withOpacity("--color-bg"),
           card: withOpacity("--color-card"),
-          "card-muted": withOpacity("--color-card-muted"),
         },
       },
       outlineColor: {
@@ -42,38 +39,24 @@ module.exports = {
       },
       borderColor: {
         skin: {
-          line: withOpacity("--color-border"),
-          fill: withOpacity("--color-text-base"),
-          accent: withOpacity("--color-accent"),
+          line: withOpacity("--color-light"),
         },
       },
       fill: {
         skin: {
-          base: withOpacity("--color-text-base"),
-          accent: withOpacity("--color-accent"),
+          base: withOpacity("--color-primary"),
         },
         transparent: "transparent",
       },
       stroke: {
         skin: {
-          accent: withOpacity("--color-accent")
+          accent: withOpacity("--color-light")
         }
       },
       fontFamily: {
-        mono: ["IBM Plex Mono", "monospace"],
-      },
-
-      typography: {
-        DEFAULT: {
-          css: {
-            pre: {
-              color: false,
-            },
-            code: {
-              color: false,
-            },
-          },
-        },
+        sans: ["Lato"],
+        liu: ["Liu"],
+        playfair: ["Playfair"]
       },
     },
   },

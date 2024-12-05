@@ -1,0 +1,25 @@
+---
+import WorkExperience from "@layouts/WorkExperience.astro";
+import type { GetStaticPaths } from "astro";
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
+
+export interface Props {
+  xp: CollectionEntry<"work">
+}
+
+export const getStaticPaths = (async () => {
+  const xps = await getCollection("work");
+
+  console.log(xps.map(xp => xp.id))
+
+  return xps.map(xp => ({
+    params: { xpId: xp.slug },
+    props: { xp }
+  }))
+}) satisfies GetStaticPaths;
+
+const { xp } = Astro.props;
+---
+
+<WorkExperience xp={xp} />

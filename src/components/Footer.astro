@@ -1,5 +1,4 @@
 ---
-import Hr from "./Hr.astro";
 import Socials from "./Socials.astro";
 
 const currentYear = new Date().getFullYear();
@@ -12,7 +11,6 @@ const { noMarginTop = false } = Astro.props;
 ---
 
 <footer class={`${noMarginTop ? "" : "mt-auto"}`}>
-  <Hr noPadding />
   <div class="footer-wrapper">
     <Socials centered />
     <div class="copyright-wrapper">
@@ -25,7 +23,7 @@ const { noMarginTop = false } = Astro.props;
 
 <style>
   footer {
-    @apply w-full;
+    @apply w-full text-skin-heading;
   }
   .footer-wrapper {
     @apply flex flex-col items-center justify-between py-6 sm:flex-row-reverse sm:py-4;
