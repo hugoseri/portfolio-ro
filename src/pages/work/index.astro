@@ -1,16 +1,73 @@
 ---
+import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
-import Layout from "@layouts/Layout.astro";
 import Main from "@layouts/Main.astro";
-import { SITE } from "@config";
+import { Card } from "@components/Card";
+import { getCollection } from "astro:content";
+import Overview from "@components/Overview.astro";
 
+const data = (await getCollection('overview', (item) => item.data.page === "projects"))
+  .sort((a,b) => a.data.order - b.data.order > 0 ? 1 : -1)
+
+const dataBySection = data.reduce((acc, item) => {
+  if (!item.data.sectionTitle) return acc
+  if (!acc[item.data.sectionTitle]) {
+    acc[item.data.sectionTitle] = [item]
+    return acc;
+  }
+  acc[item.data.sectionTitle].push(item)
+  return acc;
+}, {} as Record<string, Array<typeof data[number]>>)
 
 ---
 
-<Layout title={`Work | ${SITE.title}`}>
-  <Header activeNav="work" />
-  <Main pageTitle="Work" pageDesc="My work experiences.">
+<Layout>
+  <Header />
+  <Main>
+    <section class="flex flex-col justify-center">
+      <h1 class="font-liu text-xl pb-8">Let me tell you about a time...</h1>
+      <div class="flex flex-col gap-8">
+      {
+        Object.entries(dataBySection).map(([title, data]) => (
+          <Card className="flex flex-col items-center gap-4">
+            <h2 class="font-aboreto">{title}</h2>
+            {
+              data.map((item, idx) => (
+                <>
+                  <Overview content={item} />
+                  {
+                    idx < data.length - 1 && 
+                    <div class="bg-neutral-200 rounded-lg my-8 h-[0.5px] w-full"/>
+                  }
+                </>
+              ))
+            }
+          </Card>
+        ))
+      }
+      </div>
+    </section>
   </Main>
+
+
   <Footer />
 </Layout>
+
+<style>
+  .intro {
+    @apply my-10 flex flex-row flex-wrap justify-center items-center gap-12
+  }
+  .intro .content {
+    @apply flex flex-col gap-4
+  }
+  .portrait {
+    @apply rounded-full
+  }
+  .title {
+    @apply font-playfair text-3xl text-skin-heading
+  }
+  .description {
+    @apply text-skin-title text-lg
+  }
+</style>

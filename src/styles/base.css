@@ -4,6 +4,14 @@
 
 @layer base {
   @font-face {
+    font-family: 'Aboreto';
+    src: url('/fonts/Aboreto-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
     font-family: 'Lato';
     src: url('/fonts/Lato-Regular.ttf');
     font-weight: normal;
@@ -103,18 +111,6 @@
 
   html {
     overflow-y: scroll;
-  }
-
-  ::-webkit-scrollbar {
-    @apply w-3;
-  }
-
-  ::-webkit-scrollbar-track {
-    @apply bg-skin-fill;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    @apply bg-skin-card;
   }
 
   pre:has(code) {

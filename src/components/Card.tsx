@@ -1,33 +1,18 @@
-import Datetime from "./Datetime";
-import type { CollectionEntry } from "astro:content";
+import type React from "react";
+import type { PropsWithChildren } from "react";
 
-export interface Props {
-  href?: string;
-  frontmatter: CollectionEntry<"blog">["data"];
-  secHeading?: boolean;
+export interface CardProps {
+  className?: string,
 }
 
-export default function Card({ href, frontmatter, secHeading = true }: Props) {
-  const { title, pubDatetime, modDatetime, description } = frontmatter;
-
-  const headerProps = {
-    className: "text-lg font-medium decoration-dashed hover:underline",
-  };
+export const Card: React.FC<PropsWithChildren<CardProps>> = ({
+  className = '',
+  children
+}) => {
 
   return (
-    <li className="my-6">
-      <a
-        href={href}
-        className="inline-block text-lg font-medium decoration-dashed underline-offset-4 focus-visible:no-underline focus-visible:underline-offset-0"
-      >
-        {secHeading ? (
-          <h2 {...headerProps}>{title}</h2>
-        ) : (
-          <h3 {...headerProps}>{title}</h3>
-        )}
-      </a>
-      <Datetime pubDatetime={pubDatetime} modDatetime={modDatetime} />
-      <p>{description}</p>
-    </li>
+    <div className={`rounded-3xl max-sm:p-8 sm:py-10 sm:px-20 bg-skin-card min-w-max ${className}`}>
+      {children}
+    </div>
   );
 }

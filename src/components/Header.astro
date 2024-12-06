@@ -1,5 +1,6 @@
 ---
 import { LOGO_IMAGE, SITE } from "@config";
+import avatar from '../assets/images/avatar.svg'
 
 export interface Props {
   activeNav?: "resume" | "work" | "about";
@@ -13,7 +14,7 @@ const { activeNav } = Astro.props;
     <div class="top-nav-wrap">
       <a href="/" class="logo whitespace-nowrap">
         <img
-          src="/assets/avatar.svg"
+          src={avatar.src}
           alt={SITE.title}
           width="50px"
           height="50px"
@@ -88,7 +89,7 @@ const { activeNav } = Astro.props;
     @apply text-sm text-skin-title font-light;
   }
   .hamburger-menu {
-    @apply self-end p-2 sm:hidden;
+    @apply self-end p-2 sm:hidden h-14;
   }
   .hamburger-menu svg {
     @apply h-6 w-6 scale-125 fill-skin-base;
@@ -98,7 +99,7 @@ const { activeNav } = Astro.props;
     @apply flex w-full flex-col items-center sm:ml-2 sm:flex-row sm:justify-end sm:space-x-4 sm:py-0;
   }
   nav ul {
-    @apply mt-4 grid w-44 grid-cols-2 grid-rows-4 gap-x-2 gap-y-2 sm:ml-0 sm:mt-0 sm:w-auto sm:gap-x-5 sm:gap-y-0;
+    @apply flex max-sm:flex-col mt-4 w-44 gap-x-2 gap-y-2 sm:ml-0 sm:mt-0 sm:w-auto sm:gap-x-5 sm:gap-y-0;
   }
   nav ul li {
     @apply col-span-2 flex items-center justify-center;

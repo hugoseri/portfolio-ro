@@ -1,0 +1,30 @@
+---
+export interface Props {
+  href: string;
+  className?: string;
+  ariaLabel?: string;
+  title?: string;
+}
+
+const {
+  href,
+  className = "",
+  ariaLabel,
+  title,
+} = Astro.props;
+---
+
+<a
+  {href}
+  class:list={["button", className]}
+  aria-label={ariaLabel}
+  title={title}
+>
+  {title}
+</a>
+
+<style>
+.button {
+  @apply text-sm max-w-fit px-3 py-1.5 w-auto font-semibold rounded-xl text-skin-heading bg-skin-light hover:bg-skin-fill
+}
+</style>

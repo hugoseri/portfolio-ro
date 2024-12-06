@@ -16,6 +16,7 @@ module.exports = {
     // if one breakpoint is not enough for you
     screens: {
       sm: "640px",
+      lg: "900px",
     },
 
     extend: {
@@ -28,6 +29,7 @@ module.exports = {
       },
       backgroundColor: {
         skin: {
+          light: withOpacity("--color-light"),
           fill: withOpacity("--color-bg"),
           card: withOpacity("--color-card"),
         },
@@ -56,7 +58,8 @@ module.exports = {
       fontFamily: {
         sans: ["Lato"],
         liu: ["Liu"],
-        playfair: ["Playfair"]
+        playfair: ["Playfair"],
+        aboreto: ["Aboreto"]
       },
     },
   },

@@ -4,6 +4,13 @@ import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import { SITE } from "@config";
 import Main from "@layouts/Main.astro";
+import { Card } from "@components/Card";
+import portrait from '../assets/images/portrait.jpg'
+import { getCollection } from "astro:content";
+import Overview from "@components/Overview.astro";
+
+const data = (await getCollection('overview', (item) => item.data.page === "home"))
+  .sort((a,b) => a.data.order - b.data.order > 0 ? 1 : -1)  
 
 ---
 
@@ -13,7 +20,7 @@ import Main from "@layouts/Main.astro";
     <section class="intro">
       <img
         class="portrait"
-        src="/assets/portrait.jpg"
+        src={portrait.src}
         alt={SITE.author}
         width="160px"
         height="160px"
@@ -27,6 +34,21 @@ import Main from "@layouts/Main.astro";
         </p>
       </div>
     </section>
+    <section class="flex justify-center">
+      <Card>
+        {
+          data.map((item, idx) => (
+            <>
+              <Overview content={item} />
+              {
+                idx < data.length - 1 && 
+                <div class="bg-neutral-200 rounded-lg my-8 h-[0.5px] w-full"/>
+              }
+            </>
+          ))
+        }
+      </Card>
+    </section>
   </Main>
 
 
@@ -35,7 +57,7 @@ import Main from "@layouts/Main.astro";
 
 <style>
   .intro {
-    @apply mt-10 flex flex-row justify-center items-center gap-12
+    @apply mb-10 flex flex-row flex-wrap justify-center items-center gap-12
   }
   .intro .content {
     @apply flex flex-col gap-4

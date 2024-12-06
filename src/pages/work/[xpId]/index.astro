@@ -11,8 +11,6 @@ export interface Props {
 export const getStaticPaths = (async () => {
   const xps = await getCollection("work");
 
-  console.log(xps.map(xp => xp.id))
-
   return xps.map(xp => ({
     params: { xpId: xp.slug },
     props: { xp }
