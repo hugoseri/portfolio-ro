@@ -29,6 +29,7 @@ module.exports = {
       },
       backgroundColor: {
         skin: {
+          dark: withOpacity("--color-dark"),
           light: withOpacity("--color-light"),
           fill: withOpacity("--color-bg"),
           card: withOpacity("--color-card"),
