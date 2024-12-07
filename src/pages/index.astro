@@ -8,6 +8,7 @@ import { Card } from "@components/Card";
 import portrait from '../assets/images/portrait.jpg'
 import { getCollection } from "astro:content";
 import Overview from "@components/Overview.astro";
+import Divider from "@components/Divider.astro";
 
 const data = (await getCollection('overview', (item) => item.data.page === "home"))
   .sort((a,b) => a.data.order - b.data.order > 0 ? 1 : -1)  
@@ -42,7 +43,7 @@ const data = (await getCollection('overview', (item) => item.data.page === "home
               <Overview content={item} />
               {
                 idx < data.length - 1 && 
-                <div class="bg-neutral-200 rounded-lg my-8 h-[0.5px] w-full"/>
+                <Divider/>
               }
             </>
           ))

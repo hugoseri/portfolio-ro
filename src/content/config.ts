@@ -2,7 +2,7 @@ import { glob } from "astro/loaders";
 import { defineCollection, z } from "astro:content";
 
 const overview = defineCollection({
-  type: "content_layer",
+  type: 'content_layer',
   loader: glob({ pattern: "**/*.md", base: "./src/content/overview" }),
   schema: ({ image }) =>
     z.object({
@@ -19,4 +19,19 @@ const overview = defineCollection({
     })
 });
 
-export const collections = { overview };
+const contact = defineCollection({
+  type: 'content_layer',
+  loader: glob({ pattern: "**/*.md", base: "./src/content/contact" }),
+  schema: ({ image }) =>
+    z.object({
+      nationality: z.string(),
+      age: z.string(),
+      phone: z.string(),
+      linkedinText: z.string(),
+      location: z.string(),
+      image: image(),
+      imageAlt: z.string(),
+    })
+});
+
+export const collections = { overview, contact };

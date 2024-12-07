@@ -7,6 +7,8 @@ export type Site = {
   job: string;
   title: string;
   lightAndDarkMode: boolean;
+  email: string;
+  linkedin: string;
 };
 
 export type SocialObjects = {

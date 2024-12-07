@@ -1,6 +1,105 @@
 ---
-import About  from "@layouts/About.astro";
+import Layout from "@layouts/Layout.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import Main from "@layouts/Main.astro";
+import { Card } from "@components/Card";
+import { Copy } from "@components/Copy";
+import { getEntry } from "astro:content";
+import { SITE } from "@config";
+import Divider from "@components/Divider.astro";
+import emailIcon from "../../assets/icons/email.svg"
+import globeIcon from "../../assets/icons/globe.svg"
+import linkIcon from "../../assets/icons/link.svg"
+import mapIcon from "../../assets/icons/map.svg"
+import personIcon from "../../assets/icons/person.svg"
+import phoneIcon from "../../assets/icons/phone.svg"
+import LinkButton from "@components/LinkButton.astro";
+
+const data = await getEntry('contact', 'index')
+
+const { Content } = await data.render()
 
 ---
 
-<About />
+<Layout>
+  <Header activeNav="about" />
+  <Main>
+    <section class="flex flex-col justify-center">
+      <div class="flex flex-col gap-8 mt-10">
+        <Card className="flex flex-col items-center gap-8">
+          <div class="header">
+            <h2 class="font-aboreto text-skin-heading text-xl mt-0.5">{SITE.author}</h2>
+            <h2 class="font-liu text-skin-title text-xl">{SITE.job}</h2>
+          </div>
+          <div class="content">
+            <img
+              class="portrait"
+              src={data.data.image.src}
+              alt={data.data.imageAlt}
+              width="160px"
+              height="160px"
+            />
+            <div class="text">
+              <Content/>
+            </div>
+          </div>
+          <Divider/>
+          <div class="coordinates">
+            <div class="entry">
+              <span class="icon-container"><img src={globeIcon.src}/></span>
+              {data.data.nationality}
+            </div>
+            <div class="entry">
+              <span class="icon-container"><img src={phoneIcon.src}/></span>
+              <Copy text={data.data.phone} client:load/>
+            </div>
+            <div class="entry">
+              <span class="icon-container"><img src={linkIcon.src}/></span>
+              <LinkButton href={SITE.linkedin}>
+                {data.data.linkedinText}
+              </LinkButton>
+            </div>
+            <div class="entry">
+              <span class="icon-container"><img src={personIcon.src}/></span>
+              {data.data.age}
+            </div>
+            <div class="entry">
+              <span class="icon-container"><img src={emailIcon.src}/></span>
+              <Copy text={SITE.email} client:load/>
+            </div>
+            <div class="entry">
+              <span class="icon-container"><img src={mapIcon.src}/></span>
+              {data.data.location}
+            </div>
+          </div>
+        </Card>
+      </div>
+    </section>
+  </Main>
+  <Footer />
+</Layout>
+
+<style>
+  .header {
+    @apply flex gap-4 self-start justify-center max-sm:flex-col max-sm:gap-1
+  }
+  .content {
+    @apply flex gap-12 items-center max-sm:justify-center max-sm:flex-wrap
+  }
+  .portrait {
+    @apply rounded-full
+  }
+  .text {
+    @apply flex flex-col gap-4 text-sm
+  }
+  .coordinates {
+    @apply grid grid-cols-[4fr,6fr,6fr] max-sm:grid-cols-1 max-lg:grid-cols-2 gap-x-2
+  }
+  .coordinates .entry {
+    @apply flex items-start
+  }
+  .coordinates .entry .icon-container {
+    @apply flex h-7 min-w-5 items-center
+  }
+</style>

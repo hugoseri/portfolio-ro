@@ -19,7 +19,7 @@ const {
 {
   disabled ? (
     <span
-      class:list={["group inline-block", className]}
+      class:list={["group text-skin-title underline inline-block", className]}
       title={title}
       aria-disabled={disabled}
     >
@@ -28,7 +28,9 @@ const {
   ) : (
     <a
       {href}
-      class:list={["group inline-block hover:text-skin-title", className]}
+      target="_blank"
+      rel="noopener"
+      class:list={["group text-skin-title underline inline-block hover:text-skin-title", className]}
       aria-label={ariaLabel}
       title={title}
     >
