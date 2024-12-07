@@ -1,13 +1,7 @@
 ---
-author: Sat Naing
-pubDatetime: 2024-01-04T09:30:41.816Z
-title: AstroPaper 4.0
-slug: "gamification"
-featured: true
-ogImage: ../../assets/images/AstroPaper-v4.png
-tags:
-  - release
-description: "AstroPaper v4: ensuring a smoother and more feature-rich blogging experience."
+title: Here’s how I modernized our front-end and unified four dev squads with new processes and best practices
+image: ../../assets/images/gamification-illu.svg
+imageAlt: Gamification illustration
 ---
 
 Hello everyone! Wishing you a happy New Year 🎉 and all the best for 2024! We're excited to announce the release of AstroPaper v4, a significant update that introduces a range of new features, improvements, and bug fixes to elevate your blogging experience. A big thank you to all the contributors for their valuable input and efforts in making version 4 possible!

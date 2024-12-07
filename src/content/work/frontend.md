@@ -1,20 +1,20 @@
 ---
-author: Sat Naing
-pubDatetime: 2023-01-30T15:57:52.737Z
-title: AstroPaper 2.0
-slug: frontend
-featured: false
-ogImage: https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png
-tags:
-  - release
-description: AstroPaper with the enhancements of Astro v2. Type-safe markdown contents, bug fixes and better dev experience etc.
+title: Here’s how I modernized our front-end and unified four dev squads with new processes and best practices
+image: ../../assets/images/frontend-illu.svg
+imageAlt: Frontend illustration
+disclaimer: Due to confidentiality agreements, I am unable to share any prototypes or final results related to this project. Thank you for your understanding.
 ---
+
+# Hello
+## Hello
 
 Astro 2.0 has been released with some cool features, breaking changes, DX improvements, better error overlay and so on. AstroPaper takes advantage of those cool features, especially Content Collections API.
 
 <!-- ![Introducing AstroPaper 2.0](https://user-images.githubusercontent.com/53733092/215683840-dc2502f5-8c5a-44f0-a26c-4e7180455056.png) -->
 
 ![Introducing AstroPaper 2.0](https://user-images.githubusercontent.com/53733092/215771435-25408246-2309-4f8b-a781-1f3d93bdf0ec.png)
+
+# Hello
 
 ## Table of contents
 

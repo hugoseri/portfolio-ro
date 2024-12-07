@@ -34,4 +34,16 @@ const contact = defineCollection({
     })
 });
 
-export const collections = { overview, contact };
+const work = defineCollection({
+  type: 'content_layer',
+  loader: glob({ pattern: "**/*.md", base: "./src/content/work" }),
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      image: image(),
+      imageAlt: z.string(),
+      disclaimer: z.string().optional(),
+    })
+});
+
+export const collections = { overview, contact, work };
