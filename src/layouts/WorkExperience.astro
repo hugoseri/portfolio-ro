@@ -3,10 +3,10 @@ import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import type { CollectionEntry } from "astro:content";
-import { SITE } from "@config";
-import Button from "@components/Button.astro";
 import { Card } from "@components/Card";
 import Main from "./Main.astro";
+import LinkButton from "@components/LinkButton.astro";
+import { ChevronLeft, ChevronUp } from "lucide-react";
 
 export interface Props {
   xp: CollectionEntry<"work">;
@@ -29,13 +29,17 @@ const { Content } = await xp.render();
   <Header activeNav="work" />
 
   <Main>
-  <Button 
-    href="/work/" 
-    title="Back to the list"
-    className="sticky top-36 ml-10 max-sm:hidden"
-  />
   <div class="mx-auto flex flex-col items-center w-full max-w-4xl">
-    <Card className="flex flex-col gap-8 items-center">
+    <Card className="flex flex-col sm:py-10 sm:px-20 gap-8 items-center">
+      <LinkButton
+        className="self-start"
+        href="/work/"
+        title="back to the list"
+        blankTarget={false}
+      >
+        <ChevronLeft/>
+        Back to the list
+      </LinkButton>
       <h1 class="post-title mb-4 text-center">{title}</h1>
 
       <img
@@ -49,25 +53,26 @@ const { Content } = await xp.render();
         <div class="italic text-center">{disclaimer}</div>
       }
 
-      <div class="content prose-h1:font-liu prose-h1:text-2xl prose-h2:font-semibold">
+      <div class="
+        content
+        prose-h1:font-liu prose-h1:text-3xl prose-h1:mt-4 prose-h1:mb-2
+        prose-h2:font-semibold prose-h2:text-xl prose-h2:pl-4 prose-h2:mt-2
+        prose-h3:font-semibold prose-h3:text-md prose-h3:pl-4 prose-h3:mt-2
+        prose-ol:list-decimal	prose-ol:pl-10 prose-ol:font-semibold prose-ol:mt-2
+        prose-p:text-justify prose-p:pl-4 prose-p:font-sans
+        prose-hr:my-8 prose-hr:pl-4
+        ">
         <Content />
       </div>
-
-      <div
-        class="flex flex-col-reverse items-center justify-between gap-6 sm:flex-row-reverse sm:items-end sm:gap-4"
+      <LinkButton
+        id="back-to-top"
+        href=""
+        title="back to top"
+        blankTarget={false}
       >
-        <button
-          id="back-to-top"
-          class="focus-outline whitespace-nowrap py-1 hover:opacity-75 text-skin-title"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" class="rotate-90 fill-skin-base">
-            <path
-              d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"
-            ></path>
-          </svg>
-          <span>Back to Top</span>
-        </button>
-      </div>
+        <ChevronUp/>
+        Back to top
+      </LinkButton>
   </Card>
   </div>
   </Main> 
@@ -83,7 +88,10 @@ const { Content } = await xp.render();
     @apply text-xl font-aboreto;
   }
   .content {
-    @apply flex flex-col gap-2
+    ol + p {
+      @apply pl-6
+    }
+    @apply flex flex-col gap-2 
   }
 </style>
 

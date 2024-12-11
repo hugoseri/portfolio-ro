@@ -11,7 +11,7 @@ export const Card: React.FC<PropsWithChildren<CardProps>> = ({
 }) => {
 
   return (
-    <div className={`rounded-3xl max-sm:p-8 sm:py-10 sm:px-20 bg-skin-card max-w-5xl ${className}`}>
+    <div className={`rounded-3xl max-sm:p-8 bg-skin-card max-w-5xl ${className}`}>
       {children}
     </div>
   );

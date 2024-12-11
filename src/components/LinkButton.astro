@@ -1,25 +1,30 @@
 ---
 export interface Props {
+  id?: string;
   href: string;
   className?: string;
   ariaLabel?: string;
   title?: string;
   disabled?: boolean;
+  blankTarget?: boolean;
 }
 
 const {
+  id,
   href,
   className = "",
   ariaLabel,
   title,
   disabled = false,
+  blankTarget = true,
 } = Astro.props;
 ---
 
 {
   disabled ? (
     <span
-      class:list={["group text-skin-title underline inline-block", className]}
+      id={id}
+      class:list={["group flex items-center text-skin-title", className]}
       title={title}
       aria-disabled={disabled}
     >
@@ -27,10 +32,11 @@ const {
     </span>
   ) : (
     <a
+      id={id}
       {href}
-      target="_blank"
+      target={blankTarget ? "_blank" : undefined}
       rel="noopener"
-      class:list={["group text-skin-title underline inline-block hover:text-skin-title", className]}
+      class:list={["group  flex items-center text-skin-title hover:text-skin-title", className]}
       aria-label={ariaLabel}
       title={title}
     >

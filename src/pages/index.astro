@@ -36,7 +36,7 @@ const data = (await getCollection('overview', (item) => item.data.page === "home
       </div>
     </section>
     <section class="flex justify-center">
-      <Card>
+      <Card className="sm:py-10 sm:px-20">
         {
           data.map((item, idx) => (
             <>

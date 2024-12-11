@@ -26,6 +26,7 @@ export const PdfViewer: React.FC<PdfViewerProps> = ({
         loading={<Loader className="m-2 animate-spin"/>}
       >
           <Page
+            scale={1.2}
             pageNumber={1} 
             renderTextLayer={false} 
             renderAnnotationLayer={false} 

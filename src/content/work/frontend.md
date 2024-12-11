@@ -6,12 +6,9 @@ disclaimer: Due to confidentiality agreements, I am unable to share any prototyp
 ---
 
 # The product
-<div style="text-align: justify"> 
-Praxedo, created in 2005, is a comprehensive Field Resource Management solution designed to streamline the end-to-end workflow of service interventions. The platform empowers office teams to efficiently plan and assign technician jobs, while equipping field technicians with guided workflows, real-time updates, and mobile tools to ensure seamless service delivery. By bridging office operations and on-the-ground execution, Praxedo enhances operational efficiency, reduces response times, and improves customer satisfaction.<br/>
-<br/>
-Our client base spanned multiple segments, with telecommunications emerging as the primary industry. Additionally, we served sectors like sanitation, among others. Given the solution’s versatility as a feature-rich, off-the-shelf product, our diverse client portfolio introduced a unique challenge: understanding and addressing the varying needs and workflows of different user groups across industries.<br/>
-</div>
-<br/>
+Praxedo, created in 2005, is a comprehensive Field Resource Management solution designed to streamline the end-to-end workflow of service interventions. The platform empowers office teams to efficiently plan and assign technician jobs, while equipping field technicians with guided workflows, real-time updates, and mobile tools to ensure seamless service delivery. By bridging office operations and on-the-ground execution, Praxedo enhances operational efficiency, reduces response times, and improves customer satisfaction.
+
+Our client base spanned multiple segments, with telecommunications emerging as the primary industry. Additionally, we served sectors like sanitation, among others. Given the solution’s versatility as a feature-rich, off-the-shelf product, our diverse client portfolio introduced a unique challenge: understanding and addressing the varying needs and workflows of different user groups across industries.
 
 # Some key metrics : 
 65 000 daily users
@@ -19,43 +16,28 @@ Our client base spanned multiple segments, with telecommunications emerging as t
 6 offices worldwide (Chicago, Montreal, London, Munich, Madrid and Paris)
 
 # Techno
-<div style="text-align: justify"> 
 YUI -> migration to React
 Struts -> migration to Spring
 Given that Praxedo Web was built on an older technology stack, a key challenge was modernizing the platform to ensure better performance, scalability, and usability. The migration of the front-end to React not only upgraded the underlying technology but also provided an excellent opportunity to significantly enhance the design and user experience of the entire web application.
-<br/>
-</div>
 
 # The story
 
-<div style="text-align: justify"> 
 When I joined the company, the platform was 15 years old, built on outdated technologies, and lacked a clear focus on user experience—there wasn’t even a dedicated UX team, which reflected the low priority given to this area.
-<br/>
-<br/>
+
 Additionally, decision-making was not data-driven, as the company had not integrated data analysis into its strategic approach. There was a lack of behavioral data to understand user interactions with the application, and minimal success metrics to assess its effectiveness.
-<br/>
-<br/>
+
 These challenges resulted in significant inconsistencies in both the UX and UI across the platform, leading to user confusion and an overall perception of low product quality.
-<br/>
-<br/>
+
 At the same time, it was clear that the platform’s technologies needed to be updated, particularly by migrating the front-end from YUI to React. This technical migration, coupled with the identified UI issues, made it evident that creating a new design system was the natural solution during the transition to React.
-</div>
-<br/>
 
 # My role
-<div style="text-align: justify"> 
 My role in this mission was to lead the migration of the front-end to React, working closely with the development team to manage technical tasks and ensure a smooth transition. This included setting clear priorities for both the development team and UX designers, ensuring that key objectives were met on time and aligned with the broader goals of the company.
-<br/>
-<br/>
+
 This initiative also involved working hand-in-hand with UX designers to implement a new design system, modernizing and unifying the application's user interface. The goal was to significantly enhance usability and visual consistency, with a focus on providing clear design guidelines that supported both the user experience and development efficiency.
-<br/>
-<br/>
+
 Additionally, I took on the responsibility of establishing new processes and best practices internally. I worked to standardize workflows across teams, ensuring that all teams followed the same approach to maintain high-quality development standards. This involved sharing the processes with other development teams and continuously refining them based on feedback and results.
-<br/>
-<br/>
+
 By setting priorities, improving processes, and fostering close collaboration across teams, I helped ensure that the migration to React was successful and the new design system was effectively implemented, leading to a more cohesive and user-friendly platform.
-</div>
-<br/>
 
 # Challenges and learnings
 
@@ -63,9 +45,7 @@ By setting priorities, improving processes, and fostering close collaboration ac
 
 ### Challenge
 
-<div style="text-align: justify"> 
 One of the biggest challenges we faced was the lack of communication between the UX designers and the development team. The UX designer role was completely new within the company, so there was no established communication or collaboration process between the two teams. This disconnect made it difficult to align on goals, requirements, and expectations.
-</div>
 
 ### Solution
 
@@ -73,22 +53,21 @@ To address this, I implemented several key solutions:
 
 1. Clarifying the Role of UX:
 
-<div style="text-align: justify"> I took the time to explain the value and responsibilities of the UX role to the development team, ensuring they understood how UX fits into the overall product development process and how it benefits both the team and the users.</div>
+I took the time to explain the value and responsibilities of the UX role to the development team, ensuring they understood how UX fits into the overall product development process and how it benefits both the team and the users.
 
 2. Facilitating Regular Retrospectives:
 
-<div style="text-align: justify"> I organized regular retrospectives involving both UX designers and developers. These sessions provided a platform for both teams to reflect on the past period, identify what worked well, discuss areas for improvement, and agree on what practices needed to be stopped or refined.</div>
+I organized regular retrospectives involving both UX designers and developers. These sessions provided a platform for both teams to reflect on the past period, identify what worked well, discuss areas for improvement, and agree on what practices needed to be stopped or refined.
 
 3. Introducing New Processes:
 
-<div style="text-align: justify"> I introduced new workflows to foster better collaboration, such as shared design reviews and ongoing feedback loops between UX and development.</div>
-
-<div style="text-align: justify"> After implementing these new processes, I closely monitored their effectiveness, making adjustments as needed to ensure they were achieving the desired results and enhancing cross-team communication.</div>
+I introduced new workflows to foster better collaboration, such as shared design reviews and ongoing feedback loops between UX and development.
+<br/>
+After implementing these new processes, I closely monitored their effectiveness, making adjustments as needed to ensure they were achieving the desired results and enhancing cross-team communication.
 
 ### Outcome
 
-<div style="text-align: justify"> By establishing these solutions, I was able to bridge the gap between UX and development, creating a more cohesive and efficient workflow that ultimately improved product quality and team collaboration.</div>
-
+By establishing these solutions, I was able to bridge the gap between UX and development, creating a more cohesive and efficient workflow that ultimately improved product quality and team collaboration.
 
 ---
 
@@ -96,35 +75,25 @@ To address this, I implemented several key solutions:
 
 ### Challenge
 
-<div style="text-align: justify"> A significant challenge we faced was that developers were not accustomed to following detailed design specifications and often lacked the attention to detail needed when implementing UX designs. This led to inconsistencies between the design and the final product, creating frustration within the teams and negatively impacting the user experience.</div>
+A significant challenge we faced was that developers were not accustomed to following detailed design specifications and often lacked the attention to detail needed when implementing UX designs. This led to inconsistencies between the design and the final product, creating frustration within the teams and negatively impacting the user experience.
 
 ### Solution
 
-<div style="text-align: justify"> 
 To address this, I implemented a new QA process that included a dedicated UX review for each new component development. The focus was on ensuring that UX requirements were clearly communicated, and potential issues were caught early rather than later in the final QA phase.
-</div>
 
 1. Establishing a New QA Process with UX Checks:
 
-<div style="text-align: justify"> 
 I introduced a step in the QA process where UX designers and developers collaborated closely to ensure the design was being implemented accurately. This step helped to prevent discrepancies and ensured that the user experience was maintained throughout development.
-</div>
 
 2. Fostering Direct Communication Between Dev and UX:
 
-<div style="text-align: justify"> 
 A key aspect of the new process was creating an open line of communication between developers and the UX team. Whenever developers encountered an issue or needed to make adjustments, they were encouraged to align with the UX designer directly, ensuring quick validation of changes and reducing the risk of misalignment.
-</div>
-
-<div style="text-align: justify"> 
+<br/>
 By emphasizing direct communication, we eliminated the need for developers to go through the entire QA process before validating alternative solutions. This approach saved significant time for both the UX and development teams, enabling faster iterations and more efficient problem-solving.
-</div>
 
 ### Outcome
 
-<div style="text-align: justify"> 
 The new QA process, combined with improved communication, helped reduce errors, align expectations, and speed up the development cycle. It fostered a more collaborative environment, allowing both teams to address issues quickly and maintain the quality of the user experience.
-</div>
 
 ---
 
@@ -132,40 +101,28 @@ The new QA process, combined with improved communication, helped reduce errors, 
 
 ### Challenge
 
-<div style="text-align: justify"> 
 A key challenge during the migration process was synchronizing with other teams while the new processes and technologies were still being implemented. With the React migration and the new design system still in the early stages, it was critical to maintain alignment across all teams as changes unfolded, minimizing disruptions and confusion.
-</div>
 
 ### Solution
 
 1. Synchronizing with Other Teams:
 
-<div style="text-align: justify"> 
 I proactively collaborated with other teams to keep them updated on the progress of the migration and the implementation of the new design system. This ensured everyone stayed aligned, even as the changes were being rolled out, helping to minimize any potential disruptions.
-</div>
-
-<div style="text-align: justify"> 
+<br/>
 To keep everyone in the loop, I centralized all information related to the progress of the migration and provided regular updates. This maintained transparency and ensured all stakeholders were well-informed, which enabled teams to plan effectively and stay aligned during the transition.
-</div>
 
 2. Documenting Best Practices and Processes:
-<div style="text-align: justify"> 
+
 I took the initiative to document the best practices and processes we were implementing within the team. This documentation became a valuable reference for other teams, ensuring they adopted the same workflows, which facilitated smoother collaboration and reduced confusion about the new technologies and methods.
-</div>
 
 3. Collecting and Addressing Pain Points:
-<div style="text-align: justify"> 
+
 Throughout the migration, I collected feedback from other teams regarding their experiences with the React migration and the adoption of the new design system. This allowed us to identify potential issues early on and take corrective action, ensuring the solution was both effective and well-received across the organization.
-</div>
 
 ### Outcome
 
-<div style="text-align: justify"> 
 By implementing these solutions, I helped streamline communication, standardized workflows across teams, and ensured a more cohesive and efficient migration process, ultimately contributing to a smoother transition and better collaboration across the organization.
-</div>
 
 # Conclusion
 
-<div style="text-align: justify"> 
 Tackling these challenges required a practical approach to communication, organization, and collaboration. By aligning the development teams with clear priorities and establishing a more structured process, we made sure the front-end migration to React and the new design system went smoothly. The result was a more modern, user-friendly platform and a stronger sense of teamwork across the squads. This approach not only improved the quality of the product but also made our workflows more efficient, setting the stage for continued progress and success.
-</div>
