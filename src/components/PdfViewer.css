@@ -1,0 +1,9 @@
+.pdf-container {
+  * {
+    @apply rounded-3xl
+  }
+  canvas {
+    max-width: 100%;
+    height: auto !important;
+  }
+}
