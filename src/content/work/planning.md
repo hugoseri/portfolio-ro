@@ -5,158 +5,105 @@ imageAlt: Planning illustration
 disclaimer: Due to confidentiality agreements, I am unable to share any prototypes or final results related to this project. Thank you for your understanding.
 ---
 
-We're excited to announce the release of AstroPaper v3, packed with new features, enhancements, and bug fixes to elevate your web development experience. Let's dive into the highlights of this release:
+# The product
+<div style="text-align: justify"> 
+Praxedo, created in 2005, is a comprehensive Field Resource Management solution designed to streamline the end-to-end workflow of service interventions. The platform empowers office teams to efficiently plan and assign technician jobs, while equipping field technicians with guided workflows, real-time updates, and mobile tools to ensure seamless service delivery. By bridging office operations and on-the-ground execution, Praxedo enhances operational efficiency, reduces response times, and improves customer satisfaction.
+</div>
 
-## Table of contents
+<div style="text-align: justify"> 
+Our client base spanned multiple segments, with telecommunications emerging as the primary industry. Additionally, we served sectors like sanitation, among others. Given the solution’s versatility as a feature-rich, off-the-shelf product, our diverse client portfolio introduced a unique challenge: understanding and addressing the varying needs and workflows of different user groups across industries.
+</div>
 
-## Features & Changes
 
-### Astro v3 Integration
+# Some key metrics : 
+65 000 daily users
+150 000 jobs per day
+6 offices worldwide (Chicago, Montreal, London, Munich, Madrid and Paris)
 
-<video autoplay loop="loop" muted="muted" plays-inline="true">
-  <source src="https://github.com/satnaing/astro-paper/assets/53733092/18fdb604-1ca3-41a0-8372-1367759091ff" type="video/mp4">
-  <!-- <source src="/assets/docs/astro-paper-v3-view-transitions-demo.mp4" type="video/mp4"> -->
-</video>
+# Techno
+<div style="text-align: justify"> 
+YUI -> migration to React
+Struts -> migration to Spring
+Given that Praxedo Web was built on an older technology stack, a key challenge was modernizing the platform to ensure better performance, scalability, and usability. The migration of the front-end to React not only upgraded the underlying technology but also provided an excellent opportunity to significantly enhance the design and user experience of the entire web application.
+<br/>
+</div>
 
-AstroPaper now fully supports [Astro v3](https://astro.build/blog/astro-3/), offering improved performance and rendering speed.
+# The story
 
-Besides, we've added support for Astro's [ViewTransitions API](https://docs.astro.build/en/guides/view-transitions/), allowing you to create captivating and dynamic transitions between views.
+<div style="text-align: justify"> 
+Through collaboration with sales and project managers, we uncovered a significant user pain point in team management. Specifically, Praxedo’s planning tool presents resources—both human and material—in a sorted list format. This structure makes it challenging to visualize which resources are collaborating together, leading to two major inefficiencies. First, planners spent considerable time organizing teams due to the lack of clear visualization. Second, managing urgent tasks became more difficult, as interpreting the planning layout required significant effort.
+</div>
 
-In the "Recent Section", only non-featured posts will be displayed to avoid duplications and better support for ViewTransitions API.
+<div style="text-align: justify"> 
+Identifying these pain points underscored the critical importance and potential impact of a new feature, especially for users in the sanitation industry. Recognizing this, we initiated a Discovery phase to gain deeper insights into user needs, prioritize them effectively, and develop targeted solutions.
+</div>
 
-### Update OG Image Generation Logic
+# My role
 
-![Example OG Image](https://user-images.githubusercontent.com/40914272/269252964-a0dc6735-80f7-41ed-8e74-4d4d70f96891.png)
+<div style="text-align: justify"> 
+In this initiative, my role was to lead the UX team by setting priorities and guiding the Discovery phase. This included conducting user interviews, observing users in their workplace, organizing insights, and identifying the most frequent and impactful needs. Based on these insights, I established key hypotheses to explore, paving the way for brainstorming potential solutions.
+</div>
 
-We've updated the logic for automatic OG image generation, making it even more reliable and efficient. Besides, it now supports special characters in post titles, ensuring accurate, flexible and eye-catching social media previews.
+<div style="text-align: justify"> 
+As the Discovery phase advanced, I brought developers and the UX team together to refine the proposed solution. I prepared comprehensive specifications for both the development team and clients, ensuring alignment and clarity. This phase required robust stakeholder management, involving internal teams (sales, project managers, UX, and the development squad) and external stakeholders (end users and client representatives).
+</div>
 
-`SITE.ogImage` is now optional. If it is not specified, AstroPaper will automatically generate an OG image using `SITE.title`, `SITE.desc` and `SITE.website`
+<div style="text-align: justify"> 
+During the development process, I managed the backlog, created detailed documentation, and defined success criteria to measure the feature's effectiveness once it was live. This approach ensured the feature stayed closely aligned with user needs and stakeholder expectations.
+</div>
 
-### Theme meta tag
+<div style="text-align: justify"> 
+Additionally, as development progressed, I gathered feedback from identified user testers. This provided an opportunity to uncover more specific pain points and fine-tune the solution. By maintaining a continuous feedback loop between discovery and development, we ensured the feature consistently met user needs throughout the process.
+</div>
 
-The theme-color meta tag has been added to dynamically adapt to theme switches, ensuring a seamless user experience.
+# Results
 
-> Notice the difference at the top
+<div style="text-align: justify">
+Working on this feature brought significant improvements to the product, its market desirability, and the internal organization of our team.
+</div>
 
-**_AstroPaper v2 theme switch_**
+## Product and Market Impact:
+ 
+<div style="text-align: justify"> 
+Introducing this feature opened new commercial opportunities, particularly with clients who had previously declined our solution due to a lack of visibility in team management. This enhancement was a decisive factor in securing contracts with three additional clients. Furthermore, the feature garnered widespread adoption, with more than 2,000 users identified as active adopters—representing over 75% of our target audience in the sanitation sector.
+</div>
 
-<video autoplay loop="loop" muted="muted" plays-inline="true">
-  <source src="https://github.com/satnaing/astro-paper/assets/53733092/3ab5a1e8-1891-4264-a5bb-0ded69143c1a" type="video/mp4">
-</video>
+## Organizational Growth:
 
-**_AstroPaper v3 theme switch_**
+<div style="text-align: justify"> 
+The development of this feature also drove valuable organizational improvements. Implementing a new technology (React) required the development team to adapt its workflows, including revising how user stories were structured and defining prerequisite technical tasks. Additionally, collaboration between project managers and product managers improved significantly, ensuring relevant information was effectively communicated.
+</div>
 
-<video autoplay loop="loop" muted="muted" plays-inline="true">
-  <source src="https://github.com/satnaing/astro-paper/assets/53733092/8ac9deb8-d1f8-4029-86bd-6aa0def380b4" type="video/mp4">
-</video>
+<div style="text-align: justify">
+These learnings led to the creation of enhanced documentation and communication practices, which proved efficient enough to be adopted across other projects, contributing to lasting organizational benefits.
+</div>
 
-## Other Changes
+# Challenges and learnings
 
-### Astro Prettier Plugin
+<div style="text-align: justify"> 
+Here are some key learnings we established during this initiative:
+</div>
 
-Astro Prettier Plugin is installed out-of-the-box in order to keep the project tidy and organized.
+## Set Small Hypotheses Before Testing Solutions:
 
-### Minor Style Changes
+<div style="text-align: justify">
+Breaking down hypotheses into smaller, manageable parts before testing solutions proved far more effective. This approach allowed us to better identify what worked and what didn’t, avoiding inefficiencies from testing multiple aspects simultaneously.
+</div>
 
-The single-line code block wrapping issue has been solved, making your code snippets look pristine.
+## Involve Developers Early:
 
-Update nav style CSS to allow adding more nav links to the navigation.
+<div style="text-align: justify">
+Including developers in the process as early as possible saved significant time in the long run. While it required some upfront development time, their early involvement helped align technical feasibility with user needs and streamlined subsequent phases.
+</div>
 
-## Upgrade to AstroPaper v3
+## Re-Prioritize Strategically:
 
-> This section is only for those who want to upgrade AstroPaper v3 from the older versions.
+<div style="text-align: justify">
+While re-prioritizing during development can be stressful, it is often a strategic choice that accelerates value delivery. Flexibility in adjusting priorities helped ensure that we focused on the most impactful elements at every stage.
+</div>
 
-This section will help you migrate from AstroPaper v2 to AstroPaper v3.
+## Manage Client and Team Expectations:
 
-Before reading the rest of the section, you might also want to check [this article](https://astro-paper.pages.dev/posts/how-to-update-dependencies/) for upgrading dependencies and AstroPaper.
-
-## Option 1: Fresh Restart (recommended)
-
-In this release, a lot of changes have been made\_ replacing old Astro APIs with newer APIs, bug fixes, new features etc. Thus, if you are someone who didn't make customization very much, you should follow this approach.
-
-**_Step 1: Keep all your updated files_**
-
-It's important to keep all the files which have been already updated. These files include
-
-- `/src/config.ts` (didn't touch in v3)
-- `/src/styles/base.css` (minor changes in v3; mentioned below)
-- `/src/assets/` (didn't touch in v3)
-- `/public/assets/` (didn't touch in v3)
-- `/content/blog/` (it's your blog content directory 🤷🏻‍♂️)
-- Any other customizations you've made.
-
-```css
-/* file: /src/styles/base.css */
-@layer base {
-
-  /* Old code
-  code {
-    white-space: pre;
-    overflow: scroll;
-  } 
-  */
-
-  /* New code */
-  code,
-  blockquote {
-    word-wrap: break-word;
-  }
-  pre > code {
-    white-space: pre;
-  }
-}
-
-@layer components {
-  /* other codes */
-}
-```
-
-**_Step 1: Replace everything else with AstroPaper v3_**
-
-In this step, replace everything\_ except above files/directories (plus your customized files/directories)\_ with AstroPaper v3.
-
-**_Step 3: Schema Updates_**
-
-Keep in mind that `/src/content/_schemas.ts` has been replaced with `/src/content/config.ts`.
-
-Besides, there is no longer `BlogFrontmatter` type exported from `/src/content/config.ts`.
-
-Therefore, all the `BlogFrontmatter` type inside files need to be updated with `CollectionEntry<"blog">["data"]`.
-
-For example: `src/components/Card.tsx`
-
-```ts
-// AstroPaper v2
-import type { BlogFrontmatter } from "@content/_schemas";
-
-export interface Props {
-  href?: string;
-  frontmatter: BlogFrontmatter;
-  secHeading?: boolean;
-}
-```
-
-```ts
-// AstroPaper v3
-import type { CollectionEntry } from "astro:content";
-
-export interface Props {
-  href?: string;
-  frontmatter: CollectionEntry<"blog">["data"];
-  secHeading?: boolean;
-}
-```
-
-## Option 2: Upgrade using Git
-
-This approach is not recommended for most users. You should do the "Option 1" if you can. Only do this if you know how to resolve merge conflicts and you know what you're doing.
-
-Actually, I've already written a blog post for this case and you can check out [here](https://astro-paper.pages.dev/posts/how-to-update-dependencies/#updating-astropaper-using-git).
-
-## Outro
-
-Ready to explore the exciting new features and improvements in AstroPaper v3? Start [using AstroPaper](https://github.com/satnaing/astro-paper) now.
-
-For other bug fixes and integration updates, check out the [release notes](https://github.com/satnaing/astro-paper/releases/tag/v3.0.0) to learn more.
-
-If you encounter any bugs or face difficulties during the upgrade process, please feel free to open an issue or start a discussion on [GitHub](https://github.com/satnaing/astro-paper).
+<div style="text-align: justify">
+Balancing client demands with the well-being of the development squad was critical. Ensuring the team did not feel overwhelmed by external pressure helped maintain a healthier, more productive working environment.
+</div>
