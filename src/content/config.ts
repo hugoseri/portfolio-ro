@@ -3,7 +3,7 @@ import { defineCollection, z } from "astro:content";
 
 const overview = defineCollection({
   type: 'content_layer',
-  loader: glob({ pattern: "**/*.md", base: "./src/content/overview" }),
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/overview" }),
   schema: ({ image }) =>
     z.object({
       id: z.string(),
@@ -21,7 +21,7 @@ const overview = defineCollection({
 
 const contact = defineCollection({
   type: 'content_layer',
-  loader: glob({ pattern: "**/*.md", base: "./src/content/contact" }),
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/contact" }),
   schema: ({ image }) =>
     z.object({
       nationality: z.string(),
@@ -36,7 +36,7 @@ const contact = defineCollection({
 
 const work = defineCollection({
   type: 'content_layer',
-  loader: glob({ pattern: "**/*.md", base: "./src/content/work" }),
+  loader: glob({ pattern: "**/*.{md,mdx}", base: "./src/content/work" }),
   schema: ({ image }) =>
     z.object({
       title: z.string(),

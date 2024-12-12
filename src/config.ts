@@ -8,7 +8,7 @@ export const SITE: Site = {
   title: "Romane's portfolio",
   lightAndDarkMode: true,
   email: 'valletromanej@gmail.com',
-  linkedin: 'https://www.linkedin.com/in/romane-vallet-026714151/'
+  linkedin: 'https://www.linkedin.com/in/romane-vallet/'
 };
 
 export const LOCALE = {
@@ -28,12 +28,12 @@ export const SOCIALS: SocialObjects = [
     name: "LinkedIn",
     href: SITE.linkedin,
     linkTitle: `${SITE.author} on LinkedIn`,
-    active: true,
+    active: false,
   },
   {
     name: "Mail",
     href: SITE.email,
     linkTitle: `Send an email to ${SITE.author}`,
-    active: true,
+    active: false,
   },
 ];

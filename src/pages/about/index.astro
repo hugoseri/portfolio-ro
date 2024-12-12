@@ -10,11 +10,11 @@ import { SITE } from "@config";
 import Divider from "@components/Divider.astro";
 import emailIcon from "../../assets/icons/email.svg"
 import globeIcon from "../../assets/icons/globe.svg"
-import linkIcon from "../../assets/icons/link.svg"
+import linkedinIcon from "../../assets/icons/linkedin.svg"
 import mapIcon from "../../assets/icons/map.svg"
 import personIcon from "../../assets/icons/person.svg"
 import phoneIcon from "../../assets/icons/phone.svg"
-import LinkButton from "@components/LinkButton.astro";
+import { LinkButton } from "@components/LinkButton";
 
 const data = await getEntry('contact', 'index')
 
@@ -55,7 +55,7 @@ const { Content } = await data.render()
               <Copy text={data.data.phone} client:load/>
             </div>
             <div class="entry">
-              <span class="icon-container"><img src={linkIcon.src}/></span>
+              <span class="icon-container"><img src={linkedinIcon.src}/></span>
               <LinkButton href={SITE.linkedin} className="underline">
                 {data.data.linkedinText}
               </LinkButton>
@@ -91,7 +91,7 @@ const { Content } = await data.render()
     @apply rounded-full
   }
   .text {
-    @apply flex flex-col gap-4 text-sm
+    @apply flex flex-col gap-4 text-base text-justify
   }
   .coordinates {
     @apply grid grid-cols-[4fr,6fr,6fr] max-sm:grid-cols-1 max-lg:grid-cols-2 gap-x-2
@@ -100,6 +100,9 @@ const { Content } = await data.render()
     @apply flex items-start
   }
   .coordinates .entry .icon-container {
-    @apply flex h-7 min-w-5 items-center
+    img {
+      @apply h-4
+    }
+    @apply flex h-7 min-w-7 items-center
   }
 </style>

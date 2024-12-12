@@ -33,7 +33,10 @@ const { Content } = await content.render();
       <img class:list={['max-lg:hidden', { 'flip-img': textPosition === 'left' }, { 'normal-img': textPosition === 'right' }]} src={arrow.src}/>
     </div>
   }
-  <div class="content">
+  <div class="
+    content
+    prose-p:text-center
+  ">
     <Content/>
     <Button href={linkPath} title={linkText}>
       {linkText}
@@ -49,7 +52,7 @@ const { Content } = await content.render();
     @apply flex flex-col flex-wrap self-start text-nowrap h-full
   }
   .content {
-    @apply flex shrink flex-col flex-wrap items-center gap-4 min-w-40 max-w-80
+    @apply flex shrink flex-col flex-wrap text-base items-center gap-4 min-w-40 max-w-80
   }
   .normal-text {
     @apply lg:self-end

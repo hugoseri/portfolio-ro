@@ -9,4 +9,4 @@ order: 3
 sectionTitle: In-house innovation consultant at siemens healthineers 
 ---
 
-I Boosted Internal Security Awareness Through Gamification.
+I boosted internal security awareness through gamification.

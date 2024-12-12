@@ -4,6 +4,7 @@ image: ../../assets/images/planning-illu.svg
 imageAlt: Planning illustration
 disclaimer: Due to confidentiality agreements, I am unable to share any prototypes or final results related to this project. Thank you for your understanding.
 ---
+import { TechList } from '@components/TechList.tsx'
 
 # The product
 Praxedo, created in 2005, is a comprehensive Field Resource Management solution designed to streamline the end-to-end workflow of service interventions. The platform empowers office teams to efficiently plan and assign technician jobs, while equipping field technicians with guided workflows, real-time updates, and mobile tools to ensure seamless service delivery. By bridging office operations and on-the-ground execution, Praxedo enhances operational efficiency, reduces response times, and improves customer satisfaction.
@@ -12,15 +13,16 @@ Our client base spanned multiple segments, with telecommunications emerging as t
 
 # Some key metrics : 
 
-65 000 daily users
-150 000 jobs per day
-6 offices worldwide (Chicago, Montreal, London, Munich, Madrid and Paris)
+| 65 000 | 150 000 | 6 |
+| -------- | ------- | ------- |
+| daily users | jobs per day | offices worldwide |
 
 # Techno
 
-YUI -> migration to React
-Struts -> migration to Spring
-Given that Praxedo Web was built on an older technology stack, a key challenge was modernizing the platform to ensure better performance, scalability, and usability. The migration of the front-end to React not only upgraded the underlying technology but also provided an excellent opportunity to significantly enhance the design and user experience of the entire web application.
+<TechList content={[
+    {title:'Frontend:', tech: 'React' },
+    {title:'Backend:', tech: 'Spring' },
+]}/>
 
 # The story
 
@@ -42,11 +44,11 @@ Additionally, as development progressed, I gathered feedback from identified use
 
 Working on this feature brought significant improvements to the product, its market desirability, and the internal organization of our team.
 
-## Product and Market Impact:
+### Product and Market Impact:
  
 Introducing this feature opened new commercial opportunities, particularly with clients who had previously declined our solution due to a lack of visibility in team management. This enhancement was a decisive factor in securing contracts with three additional clients. Furthermore, the feature garnered widespread adoption, with more than 2,000 users identified as active adopters—representing over 75% of our target audience in the sanitation sector.
 
-## Organizational Growth:
+### Organizational Growth:
 
 The development of this feature also drove valuable organizational improvements. Implementing a new technology (React) required the development team to adapt its workflows, including revising how user stories were structured and defining prerequisite technical tasks. Additionally, collaboration between project managers and product managers improved significantly, ensuring relevant information was effectively communicated.
 
@@ -56,18 +58,18 @@ These learnings led to the creation of enhanced documentation and communication 
 
 Here are some key learnings we established during this initiative:
 
-## Set Small Hypotheses Before Testing Solutions:
+### Set Small Hypotheses Before Testing Solutions:
 
 Breaking down hypotheses into smaller, manageable parts before testing solutions proved far more effective. This approach allowed us to better identify what worked and what didn’t, avoiding inefficiencies from testing multiple aspects simultaneously.
 
-## Involve Developers Early:
+### Involve Developers Early:
 
 Including developers in the process as early as possible saved significant time in the long run. While it required some upfront development time, their early involvement helped align technical feasibility with user needs and streamlined subsequent phases.
 
-## Re-Prioritize Strategically:
+### Re-Prioritize Strategically:
 
 While re-prioritizing during development can be stressful, it is often a strategic choice that accelerates value delivery. Flexibility in adjusting priorities helped ensure that we focused on the most impactful elements at every stage.
 
-## Manage Client and Team Expectations:
+### Manage Client and Team Expectations:
 
 Balancing client demands with the well-being of the development squad was critical. Ensuring the team did not feel overwhelmed by external pressure helped maintain a healthier, more productive working environment.

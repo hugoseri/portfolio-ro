@@ -4,6 +4,7 @@ image: ../../assets/images/frontend-illu.svg
 imageAlt: Frontend illustration
 disclaimer: Due to confidentiality agreements, I am unable to share any prototypes or final results related to this project. Thank you for your understanding.
 ---
+import { FromTo } from '@components/FromTo.tsx'
 
 # The product
 Praxedo, created in 2005, is a comprehensive Field Resource Management solution designed to streamline the end-to-end workflow of service interventions. The platform empowers office teams to efficiently plan and assign technician jobs, while equipping field technicians with guided workflows, real-time updates, and mobile tools to ensure seamless service delivery. By bridging office operations and on-the-ground execution, Praxedo enhances operational efficiency, reduces response times, and improves customer satisfaction.
@@ -11,14 +12,19 @@ Praxedo, created in 2005, is a comprehensive Field Resource Management solution 
 Our client base spanned multiple segments, with telecommunications emerging as the primary industry. Additionally, we served sectors like sanitation, among others. Given the solution’s versatility as a feature-rich, off-the-shelf product, our diverse client portfolio introduced a unique challenge: understanding and addressing the varying needs and workflows of different user groups across industries.
 
 # Some key metrics : 
-65 000 daily users
-150 000 jobs per day
-6 offices worldwide (Chicago, Montreal, London, Munich, Madrid and Paris)
+
+| 65 000 | 150 000 | 6 |
+| -------- | ------- | ------- |
+| daily users | jobs per day | offices worldwide |
 
 # Techno
-YUI -> migration to React
-Struts -> migration to Spring
+
 Given that Praxedo Web was built on an older technology stack, a key challenge was modernizing the platform to ensure better performance, scalability, and usability. The migration of the front-end to React not only upgraded the underlying technology but also provided an excellent opportunity to significantly enhance the design and user experience of the entire web application.
+<br/>
+<FromTo content={[
+    {description:'Frontend:', from:'YUI', to:'Migration to React'},
+    {description:'Backend:', from:'Struts', to:'Migration to Spring'}
+]}/>
 
 # The story
 
@@ -61,8 +67,7 @@ I organized regular retrospectives involving both UX designers and developers. T
 
 3. Introducing New Processes:
 
-I introduced new workflows to foster better collaboration, such as shared design reviews and ongoing feedback loops between UX and development.
-<br/>
+I introduced new workflows to foster better collaboration, such as shared design reviews and ongoing feedback loops between UX and development.   
 After implementing these new processes, I closely monitored their effectiveness, making adjustments as needed to ensure they were achieving the desired results and enhancing cross-team communication.
 
 ### Outcome
@@ -87,8 +92,7 @@ I introduced a step in the QA process where UX designers and developers collabor
 
 2. Fostering Direct Communication Between Dev and UX:
 
-A key aspect of the new process was creating an open line of communication between developers and the UX team. Whenever developers encountered an issue or needed to make adjustments, they were encouraged to align with the UX designer directly, ensuring quick validation of changes and reducing the risk of misalignment.
-<br/>
+A key aspect of the new process was creating an open line of communication between developers and the UX team. Whenever developers encountered an issue or needed to make adjustments, they were encouraged to align with the UX designer directly, ensuring quick validation of changes and reducing the risk of misalignment.   
 By emphasizing direct communication, we eliminated the need for developers to go through the entire QA process before validating alternative solutions. This approach saved significant time for both the UX and development teams, enabling faster iterations and more efficient problem-solving.
 
 ### Outcome
@@ -107,8 +111,7 @@ A key challenge during the migration process was synchronizing with other teams 
 
 1. Synchronizing with Other Teams:
 
-I proactively collaborated with other teams to keep them updated on the progress of the migration and the implementation of the new design system. This ensured everyone stayed aligned, even as the changes were being rolled out, helping to minimize any potential disruptions.
-<br/>
+I proactively collaborated with other teams to keep them updated on the progress of the migration and the implementation of the new design system. This ensured everyone stayed aligned, even as the changes were being rolled out, helping to minimize any potential disruptions.   
 To keep everyone in the loop, I centralized all information related to the progress of the migration and provided regular updates. This maintained transparency and ensured all stakeholders were well-informed, which enabled teams to plan effectively and stay aligned during the transition.
 
 2. Documenting Best Practices and Processes:

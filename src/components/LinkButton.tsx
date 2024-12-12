@@ -1,5 +1,6 @@
----
-export interface Props {
+import type { PropsWithChildren } from "react";
+
+export interface LinkButtonProps {
   id?: string;
   href: string;
   className?: string;
@@ -9,7 +10,7 @@ export interface Props {
   blankTarget?: boolean;
 }
 
-const {
+export const LinkButton: React.FC<PropsWithChildren<LinkButtonProps>> = ({
   id,
   href,
   className = "",
@@ -17,30 +18,33 @@ const {
   title,
   disabled = false,
   blankTarget = true,
-} = Astro.props;
----
-
-{
-  disabled ? (
-    <span
+  children,
+}) => {
+  if (disabled) {
+    return (
+      <span
       id={id}
-      class:list={["group flex items-center text-skin-title", className]}
+      className={`group flex items-center text-skin-title ${className}`}
       title={title}
       aria-disabled={disabled}
     >
-      <slot />
+      {children}
     </span>
-  ) : (
+    ) 
+  }
+
+  return (
     <a
       id={id}
-      {href}
+      href={href}
       target={blankTarget ? "_blank" : undefined}
       rel="noopener"
-      class:list={["group  flex items-center text-skin-title hover:text-skin-title", className]}
+      className={`group flex items-center text-skin-base hover:text-skin-title ${className}`}
       aria-label={ariaLabel}
       title={title}
     >
-      <slot />
+      {children}
     </a>
   )
 }
+
