@@ -1,7 +1,7 @@
 ---
 id: resume-overview
 title: My resume
-linkText: Go to Resume !
+linkText: Go to Resume
 linkPath: /resume/
 textPosition: right
 image: ../../assets/images/resume-illu.svg

@@ -1,7 +1,7 @@
 ---
 id: projects-overview
 title: My projects
-linkText: Go to projects !
+linkText: Go to projects
 linkPath: /work/
 textPosition: left
 image: ../../assets/images/projects-illu.svg

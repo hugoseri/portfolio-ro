@@ -4,22 +4,27 @@ import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import Button from "@components/Button.astro";
+import notFound from "@assets/images/404.svg"
+import Main from "@layouts/Main.astro";
+import { Card } from "@components/Card";
+
 ---
 
 <Layout title={`404 Not Found | ${SITE.title}`}>
   <Header />
 
-  <main id="main-content">
-    <div class="not-found-wrapper">
-      <h1>404</h1>
-      <p>Page Not Found</p>
-      <Button
-        href="/"
-        title="Go back home"
-      />
-    </div>
-  </main>
-
+  <Main>
+    <section class="flex flex-col justify-center">
+      <Card className="wx-auto flex flex-col justify-center gap-16 items-center p-16">
+        <img class="w-full" src={notFound.src}/>
+        <Button
+          href="/"
+          title="Go back home"
+        />
+      </Card>
+    </section> 
+  </Main>
+  
   <Footer />
 </Layout>
 
