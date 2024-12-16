@@ -9,4 +9,4 @@ order: 1
 sectionTitle: Product manager at Praxedo
 ---
 
-I modernized our front-end and unified four dev squads with new processes and best practices.
+I modernized an outdated platform and unified four dev squads around new processes

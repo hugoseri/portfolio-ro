@@ -15,10 +15,11 @@ import mapIcon from "../../assets/icons/map.svg"
 import personIcon from "../../assets/icons/person.svg"
 import phoneIcon from "../../assets/icons/phone.svg"
 import { LinkButton } from "@components/LinkButton";
+import { render } from "astro:content";
 
 const data = await getEntry('contact', 'index')
 
-const { Content } = await data.render()
+const { Content } = await render(data);
 
 ---
 

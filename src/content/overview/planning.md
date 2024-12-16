@@ -9,4 +9,4 @@ order: 2
 sectionTitle: Product manager at Praxedo
 ---
 
-I built a game-changing feature that transformed how users manage and visualize their team schedules.
+I tackled inefficient Planning feature to drive product success
